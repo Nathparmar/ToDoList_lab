@@ -6,6 +6,8 @@ const todoForm = document.querySelector('#todo-form');
 
 const removeForm = document.querySelector('#remove-form');
 
+let deleteButton;
+
 textInput.addEventListener("input", (event) => {
     textOutput.innerText = event.target.value;
     console.log(textOutput);
@@ -23,7 +25,17 @@ todoForm.addEventListener("submit", (event) => {
     deleteButton.setAttribute("id", deleteIdNumber);
     deleteButton.innerText = "Delete";
     list.appendChild(deleteButton);
+
+    deleteButton.addEventListener("click", () => {
+        list.removeChild(deleteButton);
+        list.removeChild(newListItem);
+    });
+
 });
+
+
+
+
 
 
 
