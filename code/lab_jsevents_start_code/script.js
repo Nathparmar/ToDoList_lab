@@ -25,6 +25,8 @@ todoForm.addEventListener("submit", (event) => {
     const deleteButton = document.createElement("button");
     const deleteIdNumber = list.getElementsByTagName("li").length;
     deleteButton.setAttribute("id", deleteIdNumber);
+    deleteButton.classList.add("delete-button")
+
     deleteButton.innerText = "Delete";
     list.appendChild(deleteButton);
 
