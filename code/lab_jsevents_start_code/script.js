@@ -16,10 +16,15 @@ todoForm.addEventListener("submit", (event) => {
     const newListItem = document.createElement("li");
     newListItem.innerText = textOutput.innerText;
     list.appendChild(newListItem);
+
+    // Add a delete button paired to the new item
     const deleteButton = document.createElement("button");
+    const deleteIdNumber = list.getElementsByTagName("li").length;
+    deleteButton.setAttribute("id", deleteIdNumber);
     deleteButton.innerText = "Delete";
     list.appendChild(deleteButton);
-    document.body.insertBefore(deleteButton, list)
-})
+});
+
+
 
 
