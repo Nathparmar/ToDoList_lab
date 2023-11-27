@@ -3,6 +3,8 @@ const textInput = document.querySelector('#new-todo');
 const textOutput = document.querySelector('#text-output');
 const list = document.querySelector('#list');
 const todoForm = document.querySelector('#todo-form');
+const dateBtn = document.querySelector('#date');
+const time = document.querySelector('#time');
 
 const removeForm = document.querySelector('#remove-form');
 
@@ -33,7 +35,10 @@ todoForm.addEventListener("submit", (event) => {
 
 });
 
-
+dateBtn.addEventListener("click", () => {
+    time.innerText = Date();
+    document.body.appendChild(time);
+})
 
 
 
